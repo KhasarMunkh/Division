@@ -1,5 +1,5 @@
 add_library(Division SHARED
-    src/Application.cpp
+    src/Division/Application.cpp
 )
 
 target_include_directories(Division
