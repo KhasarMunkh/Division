@@ -15,6 +15,8 @@ TabWidth: 4
 # Control indentation for namespaces (e.g., namespace { ... })
 NamespaceIndentation: All
 
+AlignConsecutiveMacros: Consecutive
+
 # Ensure spaces are used exclusively instead of hard tab characters
 UseTab: Never
 

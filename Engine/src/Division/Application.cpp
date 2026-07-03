@@ -1,10 +1,11 @@
 #include "Application.h"
 #include <stdio.h>
+#include <spdlog/spdlog.h>
 
 namespace Division {
 
 Application::Application() {
-    printf("Divison::Application Constructed\n");
+    spdlog::info("Application Constructed");
     // Constructor implementation
 }
 

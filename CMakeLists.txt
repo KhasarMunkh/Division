@@ -12,6 +12,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${OUTPUT_DIR}")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_DIR}")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_DIR}")
 
+# Enable position-independent code for shared libraries
+set(CMAKE_POSITION_INDEPENDENT_CODE ON) 
+# This is important for shared libraries on Linux to ensure that the code can be loaded at any memory address. 
+add_subdirectory(Engine/vendor/spdlog)
+
+
 add_subdirectory(Engine)
 add_subdirectory(Sandbox)
 

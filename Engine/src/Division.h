@@ -3,6 +3,7 @@
 // For use by Division applications
 
 #include "Division/Application.h"
+#include "Division/Log.h"
 
 
 // ----------Entry point -----------------
