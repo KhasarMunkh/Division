@@ -1,14 +1,16 @@
-#include <Division/Application.h>
+#include <Division.h>
 
+class Sandbox : public Division::Application {
+public:
+    Sandbox() {
+        // Initialize your sandbox application here
+    }
 
-// namespace Division {
-//
-//     __declspec(dllimport) void Print();
-//
-// }
+    ~Sandbox() {
+        // Clean up resources here
+    }
+};
 
-
-int main() {
-    Division::Application app{};
-    return 0;
+Division::Application* Division::CreateApplication() {
+    return new Sandbox();
 }

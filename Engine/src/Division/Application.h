@@ -1,12 +1,17 @@
 #pragma once
 
+#include "Core.h"
+
 namespace Division {
 
-class Application {
-  public:
-    Application();
-    virtual ~Application();
-    void Run();
-};
+    class DIVISION_API Application {
+    public:
+        Application();
+        virtual ~Application();
+        void Run();
+    };
 
-} // namespace Division
+    // To be defined in CLIENT
+    Application* CreateApplication();
+
+}  // namespace Division

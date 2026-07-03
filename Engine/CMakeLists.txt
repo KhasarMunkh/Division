@@ -9,5 +9,12 @@ target_include_directories(Division
 
 target_compile_definitions(Division
     PRIVATE
-        DIVISION_BUILD_DLL
+        DV_BUILD_DLL
 )
+
+if(WIN32)
+    target_compile_definitions(Division 
+        PUBLIC 
+            DV_PLATFORM_WINDOWS
+    )
+endif()

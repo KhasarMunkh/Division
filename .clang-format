@@ -1,0 +1,59 @@
+---
+# Declare the target language for this configuration section
+Language: Cpp
+
+# Inherit baseline rules from a popular built-in style guide
+BasedOnStyle: Google
+
+# --- Indentation and Spacing ---
+# Set the number of spaces used for regular indentation
+IndentWidth: 4
+
+# Specify the character width of a single tab
+TabWidth: 4
+
+# Control indentation for namespaces (e.g., namespace { ... })
+NamespaceIndentation: All
+
+# Ensure spaces are used exclusively instead of hard tab characters
+UseTab: Never
+
+# Offset access modifiers (public, private) relative to the class body
+AccessModifierOffset: -4
+
+# --- Line Length and Wrapping ---
+# Wrap lines automatically when they exceed this character limit
+ColumnLimit: 120
+
+# Force function definitions to break to a new line after the return type
+AlwaysBreakAfterReturnType: None
+
+# Prevent short, single-line conditional blocks (e.g., if (condition) return;)
+AllowShortIfStatementsOnASingleLine: Never
+
+# --- Brace Style ---
+# Control opening and closing brace placement for various structures
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  BeforeElse: false
+  SplitEmptyFunction: true
+
+# --- Miscellaneous Preferences ---
+# Sort all #include lines alphabetically to keep the header clean
+SortIncludes: true
+
+# Force reference and pointer symbols to align next to the variable type name
+PointerAlignment: Left
+
+# Spaces to use before trailing comments (e.g., int a; // comment)
+SpacesBeforeTrailingComments: 2
+
+# Force an empty line space at the very end of the file
+InsertNewlineAtEOF: true
+...

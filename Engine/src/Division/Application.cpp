@@ -13,7 +13,7 @@ Application::~Application() {
 }
 
 void Application::Run() {
-    printf("Hello");
+    printf("Hello\n");
     // while(true) {
     //     // Main loop implementation
     // }
