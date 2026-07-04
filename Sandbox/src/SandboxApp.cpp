@@ -4,6 +4,7 @@ class Sandbox : public Division::Application {
 public:
     Sandbox() {
         // Initialize your sandbox application here
+        
     }
 
     ~Sandbox() {

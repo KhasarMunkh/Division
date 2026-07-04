@@ -58,4 +58,12 @@ SpacesBeforeTrailingComments: 2
 
 # Force an empty line space at the very end of the file
 InsertNewlineAtEOF: true
+
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+  AlignCompound: false
+  PadOperators: true
+
 ...
