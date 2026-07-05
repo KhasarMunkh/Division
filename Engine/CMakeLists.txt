@@ -13,6 +13,11 @@ target_link_libraries(Division
         spdlog::spdlog
 )
 
+target_precompile_headers(Division
+    PRIVATE
+        src/dvpch.h
+)
+
 target_compile_definitions(Division
     PRIVATE
         DV_BUILD_DLL

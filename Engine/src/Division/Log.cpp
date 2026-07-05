@@ -1,5 +1,6 @@
+#include <dvpch.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
 #include "Log.h"
-#include "spdlog/sinks/stdout_color_sinks-inl.h"
 
 namespace Division {
 
