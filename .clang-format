@@ -21,7 +21,7 @@ AlignConsecutiveMacros: Consecutive
 UseTab: Never
 
 # Offset access modifiers (public, private) relative to the class body
-AccessModifierOffset: -4
+AccessModifierOffset: -2
 
 # --- Line Length and Wrapping ---
 # Wrap lines automatically when they exceed this character limit
@@ -37,7 +37,7 @@ AllowShortIfStatementsOnASingleLine: Never
 # Control opening and closing brace placement for various structures
 BreakBeforeBraces: Custom
 BraceWrapping:
-  AfterClass: false
+  AfterClass: true
   AfterControlStatement: Never
   AfterEnum: false
   AfterFunction: false
