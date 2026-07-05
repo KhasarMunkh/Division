@@ -14,9 +14,15 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_DIR}")
 
 # Enable position-independent code for shared libraries
 set(CMAKE_POSITION_INDEPENDENT_CODE ON) 
+
 # This is important for shared libraries on Linux to ensure that the code can be loaded at any memory address. 
 add_subdirectory(Engine/vendor/spdlog)
 
+# set GLFW options to off, see more in glfw/cmakelists.txt 
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+add_subdirectory(Engine/vendor/glfw)
 
 add_subdirectory(Engine)
 add_subdirectory(Sandbox)

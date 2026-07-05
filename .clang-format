@@ -41,8 +41,8 @@ BraceWrapping:
   AfterControlStatement: Never
   AfterEnum: false
   AfterFunction: false
-  AfterNamespace: false
-  AfterStruct: false
+  AfterNamespace: true
+  AfterStruct: true
   BeforeElse: false
   SplitEmptyFunction: true
 
