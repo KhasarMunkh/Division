@@ -1,7 +1,6 @@
 #pragma once
 
-#include <functional>
-#include <memory>
+#include <dvpch.h>
 
 #include "Division/Core.h"
 #include "Division/Events/Event.h"
