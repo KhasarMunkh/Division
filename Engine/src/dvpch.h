@@ -14,6 +14,7 @@
 #include <unordered_set>
 
 #include <spdlog/spdlog.h>
+#include <Division/Log.h>
 
 #ifdef DV_PLATFORM_WINDOWS
     #include <Windows.h>
