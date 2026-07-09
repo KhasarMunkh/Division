@@ -40,8 +40,5 @@ namespace Division
         virtual void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; };
         virtual void SetVSync(bool enabled) override;
         virtual bool IsVSync() const override;
-
-        // Implemented by the platform-specific .cpp — the compile-time factory.
-        static std::unique_ptr<Window> Create(const WindowProps& props = WindowProps());
     };
 }  // namespace Division
