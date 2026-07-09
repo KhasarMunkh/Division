@@ -31,10 +31,13 @@ target_compile_definitions(Division
 
 if(WIN32)
     target_compile_definitions(Division PUBLIC DV_PLATFORM_WINDOWS)
+    target_sources(Division PRIVATE src/Division/Platform/Windows/WindowsWindow.cpp)
 elseif(APPLE)
     target_compile_definitions(Division PUBLIC DV_PLATFORM_MACOS)
+    target_sources(Division PRIVATE src/Division/Platform/MACOS/MACOSWindow.cpp)
 elseif(UNIX)
     target_compile_definitions(Division PUBLIC DV_PLATFORM_LINUX)
+    target_sources(Division PRIVATE src/Division/Platform/Linux/LinuxWindow.cpp)
 else()
     message(FATAL_ERROR "Unsupported platform!")
 endif()

@@ -36,9 +36,9 @@ namespace Division
         // Window attributes
         virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
         virtual void SetVSync(bool enabled)                            = 0;
-        virtual void IsVSync() const                                   = 0;
+        virtual bool IsVSync() const                                   = 0;
 
         // Implemented by the platform-specific .cpp — the compile-time factory.
-        static std::unique_ptr<Window> Create(const WindowProps& props = WindowProps());
+        static Window* Create(const WindowProps& props = WindowProps());
     };
 }  // namespace Division

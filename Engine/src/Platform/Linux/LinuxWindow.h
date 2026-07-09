@@ -1,8 +1,8 @@
 #pragma once
 
 #include <Division/Window.h>
+#include <GLFW/glfw3.h>
 
-#include "GLFW/glfw3.h"
 namespace Division
 {
 
@@ -27,7 +27,7 @@ namespace Division
 
       public:
         LinuxWindow(const WindowProps& props);
-        virtual ~LinuxWindow() {}
+        virtual ~LinuxWindow();
 
         virtual void OnUpdate() override;  // called once per frame by the run loop. It does two things: poll OS events
                                            // and swap buffers. The name is deliberately vague so a platform can do
@@ -39,7 +39,7 @@ namespace Division
         // Window attributes
         virtual void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; };
         virtual void SetVSync(bool enabled) override;
-        virtual void IsVSync() const override;
+        virtual bool IsVSync() const override;
 
         // Implemented by the platform-specific .cpp — the compile-time factory.
         static std::unique_ptr<Window> Create(const WindowProps& props = WindowProps());
