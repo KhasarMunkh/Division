@@ -1,23 +1,22 @@
-#include <dvpch.h>
-
 #include "Application.h"
 
-namespace Division {
+#include <dvpch.h>
 
-Application::Application() {
-    spdlog::info("Application Constructed");
-    // Constructor implementation
-}
+namespace Division
+{
 
-Application::~Application() {
-    printf("Divison::Application Deconstructed\n");
-}
+    Application::Application() {
+        m_Window = std::unique_ptr<Window>(Window::Create());
+        spdlog::info("Application Constructed");
+        // Constructor implementation
+    }
 
-void Application::Run() {
-    printf("Hello\n");
-    // while(true) {
-    //     // Main loop implementation
-    // }
-}
+    Application::~Application() { printf("Divison::Application Deconstructed\n"); }
 
-} // namespace Division
+    void Application::Run() {
+        while(m_Running) {
+            m_Window->OnUpdate();
+        }
+    }
+
+}  // namespace Division
